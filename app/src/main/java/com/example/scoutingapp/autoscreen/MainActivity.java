@@ -16,7 +16,6 @@ public class MainActivity<data> extends AppCompatActivity {
     public ImageButton commentBtn;
     public ImageButton undoButton;
 
-    public allianceTrench allianceTrenchObj = new allianceTrench();
     public fieldArea fieldAreaButtonsObj = new fieldArea();
     //public opponentTrench opponentTrenchObj = new opponentTrench();
     public CommentActivity commentActivityObj = new CommentActivity();
@@ -33,17 +32,6 @@ public class MainActivity<data> extends AppCompatActivity {
 
         //initializing variables
         undoButton = findViewById(R.id.undoButton);
-        if (allianceTrenchObj.allianceTrench_isClicked){
-            allianceTrenchObj.allianceTrenchIsPressed();
-        }
-        else{
-            allianceTrenchObj.allianceTrench_isClicked = false;
-        }
-
-        if (robotHitMissObj.autoHighHit_isClicked){
-            robotHitMissObj.autoHighHit_isPressed();
-            robotHitMissObj.autoHighHit_isClicked = true;
-
         }
         else{
             robotHitMissObj.autoHighHit_isClicked = false; }
