@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".autoscreen.MainActivity">
+
+    <ImageView
+        android:id="@+id/timerPng"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.748"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_lock_idle_alarm"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/teamPNG"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/timerPng"
+        app:srcCompat="@drawable/simple_two_business_people_handshake_line_icon_symbol_sign_vector_illustration_design_isolated_white_background_element_110609180" />
+
+    <ImageView
+        android:id="@+id/layerPNG"
+        android:layout_width="41dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
+        app:srcCompat="@drawable/layers_59_460671" />
+
+    <TextView
+        android:id="@+id/matchNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="92dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/teamPNG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.261" />
+
+    <ImageView
+        android:id="@+id/boardPNG"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/boardTxt"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/matchNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264"
+        app:srcCompat="@android:drawable/ic_input_get" />
+
+    <TextView
+        android:id="@+id/boardTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/teamPNG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.264" />
+
+    <TextView
+        android:id="@+id/teamNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toStartOf="@+id/timerPng"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/teamPNG"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/timerTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/matchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.371"
+        app:layout_constraintStart_toEndOf="@+id/timerPng"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/auto_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Teleop"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/matchTimer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.547" />
+
+    <Button
+        android:id="@+id/startMatchTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_light_primary"
+        android:text="Start Timer"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toEndOf="@+id/auto_txt"
+        app:layout_constraintTop_toBottomOf="@+id/matchTimer"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:orientation="vertical"
+        android:weightSum="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/control_panel"
+                    android:layout_width="121dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:textColor="#93FF45"
+                    android:textOff="control panel"
+                    android:textOn="control panel"
+                    tools:ignore="DuplicateSpeakableTextCheck" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/defending"
+                    android:layout_width="121dp"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:textColor="#93FF45"
+                    android:textOff="defending"
+                    android:textOn="defending" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="168dp"
+                android:layout_height="match_parent">
+
+                <ToggleButton
+                    android:id="@+id/risisting"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:textColor="#93FF45"
+                    android:textOff="risisting"
+                    android:textOn="risisting" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/lowhit_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/lowHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:text="low hit" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/highhit_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/highHit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:text="high hit" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/lowMiss_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/lowMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:text="low Miss" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/lowHit_txt"
+                    android:layout_width="32dp"
+                    android:layout_height="45dp"
+                    android:elevation="10dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:id="@+id/highMiss"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/md_theme_light_primary"
+                    android:text="high miss" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/Climb_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="FIELD AREA" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/launchPadBtn"
+                android:layout_width="112dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_theme_light_primary"
+                android:text="cross"
+                android:textColor="#B2EBF2"
+                android:textOff="cross"
+                android:textOn="cross" />
+
+            <ToggleButton
+                android:id="@+id/midBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/md_theme_light_primary"
+                android:text="MID"
+                android:textColor="#B2EBF2"
+                android:textOff="MID"
+                android:textOn="MID" />
+
+            <ToggleButton
+                android:id="@+id/targetBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/md_theme_light_primary"
+                android:text="TARGET"
+                android:textColor="#B2EBF2"
+                android:textOff="TARGET"
+                android:textOn="TARGET" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/pauseBtn"
+        android:layout_width="50dp"
+        android:layout_height="44dp"
+        android:backgroundTint="@color/md_theme_light_primary"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        tools:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/undoButton"
+        android:layout_width="54dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/md_theme_light_primary"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="@+id/startMatchTimer"
+        app:layout_constraintEnd_toEndOf="@+id/startMatchTimer"
+        app:layout_constraintStart_toEndOf="@+id/pauseBtn"
+        app:layout_constraintTop_toTopOf="@+id/startMatchTimer"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:ignore="SpeakableTextPresentCheck,DuplicateSpeakableTextCheck" />
+
+    <ImageButton
+        android:id="@+id/commentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/md_theme_light_primary"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/startMatchTimer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startMatchTimer"
+        app:layout_constraintTop_toTopOf="@+id/startMatchTimer"
+        app:srcCompat="@android:drawable/sym_action_chat"
+        tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+ext {
+    var = 'team865'
+    var1 = 'team865'
+    var2 = 'scouting_key'
+    var3 = 'C:\\Users\\msksu\\OneDrive\\Android-Scouting-App-2022-master\\Security Key\\scouting865.keystore'
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.0-alpha07'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
