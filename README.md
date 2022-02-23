@@ -1,2 +1,2 @@
 # Android-Scouting-App-2022
-A remade version of Warp7's 2020, and future 2022 scouting app
+WARP7's android scouting app for 2022
